@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="nav.js"></script>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><h4>IMPERSON MOVIE</h4></a>
+            
+        </div>
+        <ul class="nav-links">
+            
+            <li><a href="cast.html">CAST</a></li>
+            <li><a href="13studio.html">13 STUDIOS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="contact">
+        <form onsubmit="sendemail(); reset(); return false;">
+            <h3>CONTACT US</h3>
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="Message" id="message" placeholder="Message" required>
+            <button class="btn-1">CONTACT</button>
+        </form>
+        <h2>13 STUDIOS</h2>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendemail(){
+            Email.send({
+                Host : "smtp.google.com",
+                Username : "dayananda1",
+                // fake password , :p
+                Password : "password", 
+                To : 'g.senarath@uqconnect.edu.au',
+                From : document.getElementById("email").value,
+                Subject : "Contact imperson movie",
+                Body : document.getElementById(message).value,
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
+
+    <footer>
+        <div class="footer-home">
+            <img src="graphics/imp 1.svg" alt="">
+            <img src="graphics/13 production logo.svg" alt="">
+        
+        </div>
+        
+        <div class="footer-link">
+         <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="cast.html">CAST</a></li>
+                <li><a href="13productions.html">13 PRODUCTIONS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+        </div>
+        
+        <div class="navbtn">
+            <div class="but">
+                <button class="btn-1">WATCH MOVIE</button>
+         
+        
+            </div>
+        </div>
+    </footer>
+    <hr>
+
+
+
+</body>
+</html>

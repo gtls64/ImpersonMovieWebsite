@@ -1,0 +1,698 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* +++++++++++++++++++++++++++++ NAVIGATION ++++++++++++++++++++++++++++ */
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    grid-area: nav;
+    /* border-bottom: solid white 1px; */
+    padding: 20px;
+}
+
+nav:hover{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh;
+    background-color: rgb(0, 0, 0);
+    transition: 0.5s;
+    grid-area: nav;
+    /* border-bottom: solid white 1px; */
+    padding: 20px;
+}
+
+
+
+.logo{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 18px;
+    align-self: left;
+
+}
+
+.logo a h4{
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.logo a h4:hover{
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 10px;
+    transition: 0.5s;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.nav-links a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 1s;
+    letter-spacing: 4px;
+}
+
+
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    margin: 5px;
+} 
+
+@media screen and (max-width:1100px){
+    
+    
+    .nav-links{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 50vh;
+        top: 8vh;
+        background-color: rgb(37, 37, 37);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        opacity: 100%;
+        border: solid white;
+    }
+    .nav-links li{
+        opacity: 100%;
+        
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+inks delay 
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}   to{
+    opacity: 100%;
+    transform: translateX(0px);
+} 
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,4px);
+    color: re;
+
+}
+.toggle .line2{
+    opacity: 0%;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-4px);
+}
+
+
+/* movie shot gallery ........................................................*/
+
+.movie{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 2px;
+    border-color: white;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 40px;
+}
+
+.movie h1{
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.movie ul {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    list-style:none;
+    width:1200px;
+    height:450px;
+    border-radius:3px;
+    overflow:hidden;
+    
+}
+  
+  
+.movie li {
+    position:relative;
+    width:150px;
+    height:450px;
+    float:left;
+    border-left:1px solid white;
+    -webkit-transition:all 0.7s;
+    -moz-transition:all 0.7s;
+    transition:all 0.7s;
+    
+}
+  
+.movie ul li:first-child {
+    border:none;
+}
+  
+
+  
+.movie img {
+   
+    height:450px;
+}
+  
+.movie ul:hover li {
+    width: 20px;  
+}
+  
+  
+.movie ul li:hover {
+    width: 800px;
+}
+
+
+/* BTS gallery............................................................. */
+
+.bts{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 2px;
+    border-color: white;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.bts h1{
+    color: white;
+    position: relative;
+    text-align: center;
+    
+}
+.bts ul {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    list-style:none;
+    width:1200px;
+    height:450px;
+    border-radius:3px;
+    overflow:hidden;
+    
+}
+  
+  
+.bts li {
+    position:relative;
+    width:150px;
+    height:450px;
+    float:left;
+    border-left:1px solid white;
+    -webkit-transition:all 0.7s;
+    -moz-transition:all 0.7s;
+    transition:all 0.7s;
+    
+}
+  
+.bts ul li:first-child {
+    border:none;
+}
+  
+
+  
+.bts img {
+   
+    height:450px;
+}
+  
+.bts ul:hover li {
+    width: 20px;  
+}
+  
+  
+.bts ul li:hover {
+    width: 800px;
+}  
+  
+
+    
+
+
+.index-box {
+    border: solid rgb(255, 255, 255);
+    border-width: 1px;
+    padding: 100px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.index-box p {
+    padding: 50px;
+    color: white;
+    padding-left: 100px;
+}
+
+
+
+/***********************FOOTER**********************************/
+
+.footer{
+    min-height: 200px;
+    width: 100%;
+    background-color: black;
+    border-top: 2px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.footer-home a {
+    text-decoration: none;
+    font-family:
+    
+    
+}
+
+.footer-home img{ 
+    height: 80px;
+    padding-right: 100px;
+}
+
+
+
+.footer-link{
+    flex: auto;
+    text-align: center;
+}
+
+.footer-link ul li{
+    list-style: none;
+    /* display: inline-block; */
+    padding: 8px 12px;
+    position: relative;
+}
+
+
+.footer-link ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.footer-link ul li a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 4px;
+    transition: 0.4s;
+}
+
+footer{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid white 1px;
+    background-color: black;
+    min-height: 150px;
+}
+
+/* ____________________button highlight______________________________ */
+
+.but{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+
+}
+
+.btn-1{
+    width: 250px;
+    height: 60px;
+    border: 5px;
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: #BE0000;
+    border-radius: 0px;
+    box-shadow:blank;
+    transition: ease-out 0.8s;
+    font-size: 1rem;
+    outline: none;
+    font-style: bold;
+}
+
+.btn-1:hover{
+    width: 250px;
+    box-shadow: inset 250px 0 0 0 rgb(0, 0, 0);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+}
+
+/* contact form........................................................ */
+
+.contact{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-image: url(Photos/crew.jpg);
+}
+form{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 6px;
+    margin-left: 40px;
+}
+ form h3{
+     color: white;
+     font-weight: 400;
+     margin-bottom: 20px;
+     align-self: center;
+ }
+
+ form input,form textarea{
+     border: 10px;
+     margin: 10px 0px;
+     padding: 12px;
+     outline: none;
+     background: white;
+     font-size: 16px;
+ }
+
+ form .btn-1{
+     align-self: center;
+     padding: 20px;
+     margin: 20px;
+ }
+
+ .contact h2{
+     color: white;
+     padding-right: 100px;
+     align-self: right;
+     margin: 100px;
+     font-size: 4rem;
+ }
+
+
+ /* 13 productions page............................................. */
+
+ .studiophoto{
+     width: auto;
+     height: 90vh;
+     background-image: url(Photos/crew.jpg);
+     background-color: black;
+     background-repeat: no-repeat ;
+     background-position: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: 1s;
+ }
+
+ .studiophoto:hover{
+    width: auto;
+    height: 70vh;
+    background-image: url(Photos/crew.jpg);
+    background-color: black;
+    background-repeat: no-repeat ;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+
+ }
+ .studiophoto h2{
+     color: white;
+     font-size: 80px;
+     letter-spacing: 10px;
+     transition: 1s;
+ }
+
+ .studiophoto h2:hover{
+    color: white;
+    font-size: 80px;
+    letter-spacing: 30px;
+    transition: 1s;
+}
+
+/* index video......................................................... */
+
+ .videoindex{
+     position: relative;
+     width: 100%;
+     height: 800px;
+     /* display: flex; */
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     
+ }
+ .videoindex h2{
+     position: absolute;
+     text-align: center;
+     font-size: 4rem;
+     padding: 20px;
+     margin: 20px;
+     z-index: 1;
+     align-self: center;
+     color: white;
+     font-weight: 300;
+      
+ }
+
+ .videoindex img {
+    position: absolute;
+    text-align: center;
+    height: 60vh;
+    z-index: 1;
+    align-self: center;
+    z-index: 1;
+    transition: 1s;
+   
+ }
+
+ .videoindex img:hover {
+    position: absolute;
+    text-align: center;
+    height: 62vh;
+    z-index: 1;
+    align-self: center;
+    z-index: 1;
+    transition: 1s;
+   
+ }
+
+/* 13 studios........................................................ */
+
+.team{
+    position: relative;
+     width: 100%;
+     height: 50vh;
+    display: flex; 
+     align-items: center;
+     justify-content: center;
+     background-color: black;
+     text-align: left;
+
+}
+
+.team h2{
+    color: white;
+}
+
+.team p{
+    position: relative;
+    text-align: left;
+    align-content: left;
+    padding: 40px;
+    padding-bottom: 20px;
+    margin: 15vh;
+    
+    align-self: center;
+    color: white;
+     
+}
+
+.contactsec{
+    position: relative;
+     width: 100%;
+     height: 20vh;
+    display: flex; 
+     align-items: center;
+     justify-content: center;
+     background-color: black;
+     text-align: left;
+}
+
+/* Cast............................................................... */
+
+.cast1{
+    width: auto;
+    height: 50vh;
+    background-image: url(Photos/1.jpg);
+    background-color: black;
+    background-repeat: no-repeat ;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: 1s;
+}
+
+.cast1:hover{
+   width: auto;
+   height: 90vh;
+   background-image: url(Photos/1.jpg);
+   background-color: black;
+   background-repeat: no-repeat ;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   transition: 1s;
+
+}
+.cast1 h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    transition: 1s;
+    margin-right: 200px;
+}
+/* ............................................. */
+
+.cast2{
+    width: auto;
+    height: 50vh;
+    background-image: url(Photos/5.jpg);
+    background-color: black;
+    background-repeat: no-repeat ;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: 1s;
+}
+
+.cast2:hover{
+   width: auto;
+   height: 90vh;
+   background-image: url(Photos/5.jpg);
+   background-color: black;
+   background-repeat: no-repeat ;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   transition: 1s;
+
+}
+.cast2 h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    transition: 1s;
+    margin-right: 200px;
+}
+
+/* ............................................. */
+
+.cast3{
+    width: auto;
+    height: 50vh;
+    background-image: url(Photos/8.jpg);
+    background-color: black;
+    background-repeat: no-repeat ;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: 1s;
+}
+
+.cast3:hover{
+   width: auto;
+   height: 90vh;
+   background-image: url(Photos/8.jpg);
+   background-color: black;
+   background-repeat: no-repeat ;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+   transition: 1s;
+
+}
+.cast3 h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    transition: 1s;
+    margin-right: 200px;
+}
